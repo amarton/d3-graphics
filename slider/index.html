@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            background:#181818;
+
+        }
+
+        #vis {
+            height: 100%;
+            max-height:500px;
+            margin: 0;
+            background:#181818;
+        }
+
+        path, line {
+          stroke:#fff;
+        }
+        text, label, #selected_temp, .degree-text, .graphic-headline, .graphic-chatter {
+          color:#fff;
+          fill:#fff;
+          font-family: 'Montserrat', sans-serif;
+          font-size:1em;
+        }
+
+        .graphic-headline {
+          font-size:2em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p class="graphic-headline">EMS calls for certain health conditions increase as the temperature rises</p>
+    <p class="graphic-chatter">This chart shows the rise and fall of emergency medical calls for certain health conditions at various temperatures in Baltimore city. Each bar represents the percentage of calls that particular health condition represents of total calls in the specified temperature range. Drag the slider to change the temperature range and explore how EMS calls changed at different temperatures. </p>
+
+
+      <form>
+          <label for="year">Select a temperature: </label>
+          <input type="range" min=0 max=100 step=10 id="temp" value=70 oninput="selected_temp.value = temp.value">
+
+
+        <text>Temps in the</text>  <output name="selected_temp" id="selected_temp">70</output><span class="degree-text">s</span>
+      </form>
+      <div id="vis">
+      </div>
+      <text>*In percents
+      <br><text>Source: Baltimore EMS calls 2014-2018, data obtained from Baltimore City Fire Department
+
+
+      <script src="script.js"></script>
+
+</body>
+</html>
