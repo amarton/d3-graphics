@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>
+    	Capital News Service
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Poppins:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Load c3.css -->
+	<link href="css/c3.css" rel="stylesheet">
+
+	<!-- Load our css -->
+	<link href="css/css.css" rel="stylesheet">
+
+	<!-- Load d3.js and c3.js -->
+	<script src="js/d3.min.js" charset="utf-8"></script>
+	<script src="js/c3.min.js"></script>
+
+  </head>
+
+  <body>
+   	<div id="container">
+   		<h1 class="highcharts-title">Put your title here</h1>
+
+   		<text class="highcharts-subtitle" y="60">
+   			<tspan>BY JORDAN STOVKA</tspan>
+   			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+   			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+   			<br>
+   			<span style="height:12px; font-size:8pt; background-color:#fbd603 ; color:#fbd603 ;">_______________________________________________</span>
+   		</text>
+   		<div id="chart"></div>
+   		<div id="source"><text><a href="http://cnsmaryland.org/home"><tspan>Source: Capital News Service</tspan></a></text></div>
+   		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+   	</div>
+   	<script type="text/javascript">
+
+
+var chart = c3.generate({
+    data: {
+        columns: [
+            ['data1', 300, 350, 300, 0, 0, 0],
+            ['data2', 130, 100, 140, 200, 150, 50]
+        ],
+        types: {
+            data1: 'area',
+            data2: 'area-spline'
+        }
+    }
+});
+
+
+
+ 	 </script>
+  </body>
+
+</html>
